@@ -35,7 +35,7 @@ const Navbar = ({ toggle, setToggle }) => {
           ))}
         </ul>
         <div>
-          <BiSolidUserCircle className="w-8 h-8"/>
+          <BiSolidUserCircle className="w-8 h-8" />
         </div>
       </section>
     </nav>
