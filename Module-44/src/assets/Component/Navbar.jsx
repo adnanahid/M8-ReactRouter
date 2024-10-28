@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "./Link";
+import { BiSolidUserCircle } from "react-icons/bi";
 
 const Navbar = ({ toggle, setToggle }) => {
   const routes = [
@@ -23,15 +24,20 @@ const Navbar = ({ toggle, setToggle }) => {
         <h2 className="text-2xl font-bold">adnan's</h2>
       </section>
 
-      <ul
-        className={`${
-          toggle ? "top-10 left-3" : "top-10 -left-60"
-        } md:flex md:static absolute duration-1000`}
-      >
-        {routes.map((route) => (
-          <Link route={route}></Link>
-        ))}
-      </ul>
+      <section className="flex items-center">
+        <ul
+          className={`${
+            toggle ? "top-10 left-3" : "top-10 -left-60"
+          } md:flex md:static absolute duration-1000`}
+        >
+          {routes.map((route) => (
+            <Link route={route}></Link>
+          ))}
+        </ul>
+        <div>
+          <BiSolidUserCircle className="w-8 h-8"/>
+        </div>
+      </section>
     </nav>
   );
 };
